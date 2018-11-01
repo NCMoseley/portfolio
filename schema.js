@@ -1,6 +1,7 @@
 exports.typeDefs = `
 
 type Project {
+  _id: ID 
   name: String!
   category: String!
   description: String!
@@ -11,6 +12,7 @@ type Project {
 }
 
 type User {
+  _id: ID 
   username: String! @unique
   password: String! 
   email: String!
