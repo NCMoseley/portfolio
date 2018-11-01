@@ -1,7 +1,7 @@
 {
-  "name": "react-recipes",
+  "name": "portfolio",
   "version": "1.0.0",
-  "description": "A starter for React-Apollo-GraphQL projects",
+  "description": "A simple React-Apollo-GraphQL portfolio application",
   "main": "server.js",
   "scripts": {
     "server": "nodemon server.js",
@@ -9,7 +9,7 @@
     "dev":
       "concurrently --names \"server,client\" \"npm run server --silent\" \"npm run client --silent\""
   },
-  "author": "",
+  "author": "ncmoseley",
   "license": "ISC",
   "dependencies": {
     "apollo-server-express": "^1.3.6",
