@@ -2,6 +2,11 @@
   text-align: center;
 }
 
+a {
+  color: #1EAEDB;
+  text-decoration: none !important;
+}
+
 nav {
   text-align: center;
   margin-bottom: 1em;
