@@ -24,6 +24,10 @@ type Query {
   getAllProjects:  [Project]
 }
 
+type Token {
+  token: String!
+}
+
 type Mutation {
   addProject( 
   name: String!
@@ -32,6 +36,9 @@ type Mutation {
   instructions: String!
   username: String
    ): Project
+
+  signupUser( username: String! password: String! email: String!): Token
+
 }
 
 `;
