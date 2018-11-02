@@ -13,7 +13,7 @@ type Project {
 
 type User {
   _id: ID 
-  username: String! @unique
+  username: String! 
   password: String! 
   email: String!
   joinDate: String

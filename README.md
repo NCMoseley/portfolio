@@ -1,9 +1,13 @@
 # Portfolio Server
 
-Server side for a portfolio sharing application. 
+Server side for a portfolio sharing application.
 
-## Resources 
+## Resources
 
-mLab for MongoDB hosting. 
+mLab for MongoDB hosting.
 
 https://mlab.com/
+
+react-apollo
+apollo-boost
+jwt-decode
