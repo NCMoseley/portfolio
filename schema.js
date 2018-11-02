@@ -37,6 +37,8 @@ type Mutation {
   username: String
    ): Project
 
+   signinUser( username: String! password: String!): Token
+
   signupUser( username: String! password: String! email: String!): Token
 
 }
