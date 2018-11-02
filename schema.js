@@ -22,6 +22,8 @@ type User {
 
 type Query {
   getAllProjects:  [Project]
+
+  getCurrentUser: User
 }
 
 type Token {

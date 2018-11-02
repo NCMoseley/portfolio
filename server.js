@@ -5,6 +5,7 @@ require('dotenv').config({ path: 'var.env' });
 const Project = require('./models/Project.js');
 const User = require('./models/User.js');
 const cors = require('cors');
+const jwt = require('jsonwebtoken');
 
 // Bring in GraphQL-Express middlewarre
 const { graphiqlExpress, graphqlExpress } = require('apollo-server-express');
@@ -33,6 +34,22 @@ const corsOptions = {
 
 app.use(cors(corsOptions));
 
+// Set up JWT auth middleware
+
+app.use(async (req, res, next) => {
+  const token = req.headers['authorization'];
+  if (token !== 'null') {
+    try {
+      const currentUser = await jwt.verify(token, process.env.SECRET);
+      req.currentUser = currentUser;
+    } catch (err) {
+      console.log(err);
+    }
+  }
+  console.log(token, typeof token);
+  next();
+});
+
 // Create Graphiql application
 app.use('/graphiql', graphiqlExpress({ endpointURL: '/graphql' }));
 
@@ -40,10 +57,10 @@ app.use('/graphiql', graphiqlExpress({ endpointURL: '/graphql' }));
 app.use(
   '/graphql',
   bodyParser.json(),
-  graphqlExpress({
+  graphqlExpress(({ currentUser }) => ({
     schema,
-    context: { Project, User }
-  })
+    context: { Project, User, currentUser }
+  }))
 );
 
 const PORT = process.env.PORT || 4444;

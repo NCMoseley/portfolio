@@ -18,6 +18,15 @@ export const GET_ALL_PROJECTS = gql`
 // Project Mutations
 
 // User Queries
+export const GET_CURRENT_USER = gql`
+  query {
+    getCurrentUser {
+      username
+      joinDate
+      email
+    }
+  }
+`;
 
 // User Mutations
 export const SIGNIN_USER = gql`

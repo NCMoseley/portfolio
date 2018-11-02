@@ -10,11 +10,27 @@ import './index.css';
 import App from './components/App';
 import Signin from './components/auth/Signin';
 import Signup from './components/auth/Signup';
+import { withSession } from './components/withSession';
 import ApolloClient from 'apollo-boost';
 import { ApolloProvider } from 'react-apollo';
 
 const client = new ApolloClient({
-  uri: 'http://localhost:4444/graphql'
+  uri: 'http://localhost:4444/graphql',
+  fetchOptions: {
+    credentials: 'include'
+  },
+  request: operation => {
+    const token = localStorage.getItem('token');
+    operation.setContext({
+      headers: {
+        authorization: token
+      }
+    });
+  },
+  onError: ({ networkError }) => {
+    if (networkError) console.log('Network Error', networkError);
+    // if (networkError.statusCode === 401) localStorage.setItem('token');
+  }
 });
 
 const Root = () => (
@@ -28,9 +44,11 @@ const Root = () => (
   </Router>
 );
 
+const RootWithSession = withSession(Root);
+
 ReactDOM.render(
   <ApolloProvider client={client}>
-    <Root />
+    <RootWithSession />
   </ApolloProvider>,
   document.getElementById('root')
 );
