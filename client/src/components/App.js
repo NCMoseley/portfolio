@@ -3,6 +3,7 @@ import './App.css';
 
 import { Query } from 'react-apollo';
 import { GET_ALL_PROJECTS } from '../queries';
+import { ProjectItem } from './project/ProjectItem';
 
 const App = () => (
   <div className="App">
@@ -12,7 +13,13 @@ const App = () => (
         if (loading) return <div>Loading...</div>;
         if (error) return <div>Error...</div>;
         console.log(data);
-        return <p>Projects</p>;
+        return (
+          <ul>
+            {data.getAllProjects.map(project => (
+              <ProjectItem key={project.name} {...project} />
+            ))}
+          </ul>
+        );
       }}
     </Query>
   </div>

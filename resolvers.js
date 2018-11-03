@@ -12,6 +12,11 @@ exports.resolvers = {
       const allProjects = await Project.find();
       return allProjects;
     },
+    // TODO: _id
+    getProject: async (root, { name }, { Project }) => {
+      const project = await Project.findOne({ name });
+      return project;
+    },
     getCurrentUser: async (root, args, { currentUser, User }) => {
       if (!currentUser) return null;
       const user = await User.findOne({

@@ -1,12 +1,13 @@
+// TODO: Add _id to getProject
 exports.typeDefs = `
 
 type Project {
-  _id: ID 
+  _id: ID
   name: String!
   category: String!
   description: String!
   instructions: String!
-  createDate: String
+  createdDate: String
   likes: Int
   username: String
 }
@@ -22,6 +23,8 @@ type User {
 
 type Query {
   getAllProjects:  [Project]
+  
+  getProject(name: String!): Project
 
   getCurrentUser: User
 }
@@ -39,7 +42,7 @@ type Mutation {
   username: String
    ): Project
 
-   signinUser( username: String! password: String!): Token
+  signinUser( username: String! password: String!): Token
 
   signupUser( username: String! password: String! email: String!): Token
 
