@@ -1,7 +1,7 @@
 import { gql } from 'apollo-boost';
 
-// Project Queries
 // TODO: Add _id field
+// Project Queries
 export const GET_ALL_PROJECTS = gql`
   query {
     getAllProjects {
@@ -23,8 +23,8 @@ export const GET_PROJECT = gql`
     }
   }
 `;
-// Project Mutations
 
+// Project Mutations
 export const ADD_PROJECT = gql`
   mutation(
     $name: String!
