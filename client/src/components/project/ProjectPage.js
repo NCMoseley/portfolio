@@ -21,6 +21,7 @@ const ProjectPage = ({ match }) => {
             <p>Instructions: {data.getProject.instructions}</p>
             <p>Likes: {data.getProject.likes}</p>
             <p>Created By: {data.getProject.username}</p>
+            <button>Like</button>
           </div>
         );
       }}

@@ -1,20 +1,26 @@
 import React, { Component } from 'react';
+import { withRouter } from 'react-router-dom';
 import { Mutation } from 'react-apollo';
 
-import { ADD_PROJECT } from '../../queries/';
+import { ADD_PROJECT, GET_ALL_PROJECTS } from '../../queries/';
 import { Error } from '../../components/Error';
+const initialState = {
+  name: '',
+  instructions: '',
+  category: 'Front End',
+  description: '',
+  username: ''
+};
 class AddProject extends Component {
-  state = {
-    name: '',
-    instructions: '',
-    category: 'Front End',
-    description: '',
-    username: ''
-  };
+  state = { ...initialState };
 
   componentDidMount() {
     this.setState({ username: this.props.session.getCurrentUser.username });
   }
+
+  clearState = () => {
+    this.setState({ ...initialState });
+  };
 
   handleChange = event => {
     const { name, value } = event.target;
@@ -25,6 +31,18 @@ class AddProject extends Component {
     event.preventDefault();
     addProject().then(({ data }) => {
       console.log(data);
+      this.clearState();
+      this.props.history.push('/');
+    });
+  };
+  // Update data on home page after new Project is added.
+  updateCache = (cache, { data: { addProject } }) => {
+    const { getAllProjects } = cache.readQuery({ query: GET_ALL_PROJECTS });
+    cache.writeQuery({
+      query: GET_ALL_PROJECTS,
+      data: {
+        getAllProjects: [addProject, ...getAllProjects]
+      }
     });
   };
 
@@ -41,6 +59,7 @@ class AddProject extends Component {
       <Mutation
         mutation={ADD_PROJECT}
         variables={{ name, category, description, instructions, username }}
+        update={this.updateCache}
       >
         {(addProject, { data, loading, error }) => {
           return (
@@ -97,4 +116,4 @@ class AddProject extends Component {
   }
 }
 
-export default AddProject;
+export default withRouter(AddProject);

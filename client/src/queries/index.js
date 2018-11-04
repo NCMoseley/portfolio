@@ -20,6 +20,17 @@ export const GET_PROJECT = gql`
       instructions
       createdDate
       likes
+      username
+    }
+  }
+`;
+
+export const SEARCH_PROJECTS = gql`
+  query($searchTerm: String) {
+    searchProjects(searchTerm: $searchTerm) {
+      name
+      likes
+      username
     }
   }
 `;

@@ -9,13 +9,24 @@ const createToken = (user, secret, expiresIn) => {
 exports.resolvers = {
   Query: {
     getAllProjects: async (root, args, { Project }) => {
-      const allProjects = await Project.find();
+      const allProjects = await Project.find().sort({ createdDate: 'desc' });
       return allProjects;
     },
     // TODO: _id
     getProject: async (root, { name }, { Project }) => {
       const project = await Project.findOne({ name });
       return project;
+    },
+    searchProjects: async (root, { searchTerm }, { Project }) => {
+      if (searchTerm) {
+        // search
+      } else {
+        const projects = await Project.find().sort({
+          likes: 'desc',
+          createdDate: 'desc'
+        });
+        return projects;
+      }
     },
     getCurrentUser: async (root, args, { currentUser, User }) => {
       if (!currentUser) return null;

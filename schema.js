@@ -26,6 +26,11 @@ type Query {
   
   getProject(name: String!): Project
 
+  searchProjects(searchTerm: String): [Project]
+
+
+
+
   getCurrentUser: User
 }
 
