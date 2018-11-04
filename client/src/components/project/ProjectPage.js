@@ -10,8 +10,14 @@ const ProjectPage = ({ match }) => {
   return (
     <Query query={GET_PROJECT} variables={{ name }}>
       {({ data, loading, error }) => {
-        if (loading) return <div>Loading...</div>;
-        if (error) return <div>Error</div>;
+        if (loading) return <div className="App">Loading...</div>;
+        if (error)
+          return (
+            <div className="App">
+              Error
+              {console.error(error)}
+            </div>
+          );
         console.log(data);
         return (
           <div className="App">

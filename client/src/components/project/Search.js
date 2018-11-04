@@ -7,8 +7,14 @@ import { SEARCH_PROJECTS } from '../../queries';
 export const Search = () => (
   <Query query={SEARCH_PROJECTS} variables={{ searchTerm: '' }}>
     {({ data, loading, error }) => {
-      if (loading) return <div className="App">Loading</div>;
-      if (error) return <div className="App">Error</div>;
+      if (loading) return <div className="App">Loading...</div>;
+      if (error)
+        return (
+          <div className="App">
+            Error
+            {console.error(error)}
+          </div>
+        );
       console.log(data);
       return (
         <div className="App">
