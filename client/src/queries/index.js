@@ -25,6 +25,31 @@ export const GET_PROJECT = gql`
 `;
 // Project Mutations
 
+export const ADD_PROJECT = gql`
+  mutation(
+    $name: String!
+    $category: String!
+    $description: String!
+    $instructions: String!
+    $username: String
+  ) {
+    addProject(
+      name: $name
+      category: $category
+      description: $description
+      instructions: $instructions
+      username: $username
+    ) {
+      name
+      category
+      description
+      instructions
+      createdDate
+      likes
+    }
+  }
+`;
+
 // User Queries
 export const GET_CURRENT_USER = gql`
   query {

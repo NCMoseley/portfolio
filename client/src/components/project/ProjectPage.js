@@ -13,7 +13,16 @@ const ProjectPage = ({ match }) => {
         if (loading) return <div>Loading...</div>;
         if (error) return <div>Error</div>;
         console.log(data);
-        return <div>Project page</div>;
+        return (
+          <div className="App">
+            <h2>{data.getProject.name}</h2>
+            <p>Category: {data.getProject.category}</p>
+            <p>Description: {data.getProject.description}</p>
+            <p>Instructions: {data.getProject.instructions}</p>
+            <p>Likes: {data.getProject.likes}</p>
+            <p>Created By: {data.getProject.username}</p>
+          </div>
+        );
       }}
     </Query>
   );
