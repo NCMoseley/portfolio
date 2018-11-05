@@ -35,6 +35,14 @@ export const UserProjects = ({ username }) => (
       return (
         <ul>
           <h3>Your Projects</h3>
+          {!data.getUserProjects.length && (
+            <p>
+              <strong>
+                You have not added any projects yet. Click on Add project in the
+                navigation bar to populate your profile.
+              </strong>
+            </p>
+          )}
           {data.getUserProjects.map(project => (
             <li key={project.name}>
               <Link to={`/projects/${project.name}`}>
@@ -46,9 +54,7 @@ export const UserProjects = ({ username }) => (
                 variables={{ name: project.name }}
                 refetchQueries={() => [
                   { query: GET_ALL_PROJECTS },
-                  {
-                    query: GET_CURRENT_USER
-                  }
+                  { query: GET_CURRENT_USER }
                 ]}
                 update={(cache, { data: { deleteUserProject } }) => {
                   const { getUserProjects } = cache.readQuery({

@@ -2,7 +2,11 @@ import React, { Component } from 'react';
 import { withRouter } from 'react-router-dom';
 import { Mutation } from 'react-apollo';
 
-import { ADD_PROJECT, GET_ALL_PROJECTS } from '../../queries/';
+import {
+  ADD_PROJECT,
+  GET_ALL_PROJECTS,
+  GET_USER_PROJECTS
+} from '../../queries/';
 import { Error } from '../../components/Error';
 import { withAuth } from '../withAuth';
 
@@ -60,6 +64,9 @@ class AddProject extends Component {
     return (
       <Mutation
         mutation={ADD_PROJECT}
+        refetchQueries={() => [
+          { query: GET_USER_PROJECTS, variables: { username } }
+        ]}
         variables={{ name, category, description, instructions, username }}
         update={this.updateCache}
       >
