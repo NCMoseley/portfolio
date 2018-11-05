@@ -32,4 +32,8 @@ const ProjectSchema = new Schema({
   }
 });
 
+ProjectSchema.index({
+  '$**': 'text'
+});
+
 module.exports = mongoose.model('Project', ProjectSchema);
