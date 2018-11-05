@@ -16,7 +16,7 @@ import Signin from './components/auth/Signin';
 import Signup from './components/auth/Signup';
 import Search from './components/project/Search.js';
 import AddProject from './components/project/AddProject';
-import { Profile } from './components/profile/Profile';
+import Profile from './components/profile/Profile';
 import { withSession } from './components/withSession';
 import ProjectPage from './components/project/ProjectPage';
 

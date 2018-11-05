@@ -4,6 +4,8 @@ import { Mutation } from 'react-apollo';
 
 import { ADD_PROJECT, GET_ALL_PROJECTS } from '../../queries/';
 import { Error } from '../../components/Error';
+import { withAuth } from '../withAuth';
+
 const initialState = {
   name: '',
   instructions: '',
@@ -116,4 +118,6 @@ class AddProject extends Component {
   }
 }
 
-export default withRouter(AddProject);
+export default withAuth(session => session && session.getCurrentUser)(
+  withRouter(AddProject)
+);
