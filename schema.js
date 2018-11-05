@@ -49,6 +49,8 @@ type Mutation {
   username: String
    ): Project
 
+  likeProject(name: String!, username: String!): Project
+
   deleteUserProject(name: String!): Project
 
   signinUser( username: String! password: String!): Token

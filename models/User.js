@@ -22,8 +22,9 @@ const UserSchema = new Schema({
     type: Date,
     default: Date.now
   },
+  // TODO: if ObjectId related errors.......type: [Schema.Types.ObjectId] for favorites.
   favorites: {
-    type: [Schema.Types.ObjectId],
+    type: [String],
     ref: 'Project'
   }
 });

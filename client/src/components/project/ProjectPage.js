@@ -3,6 +3,7 @@ import { withRouter } from 'react-router-dom';
 import { Query } from 'react-apollo';
 
 import { GET_PROJECT } from '../../queries';
+import LikeProject from './LikeProject';
 
 // TODO: _id in place of name
 const ProjectPage = ({ match }) => {
@@ -27,7 +28,7 @@ const ProjectPage = ({ match }) => {
             <p>Instructions: {data.getProject.instructions}</p>
             <p>Likes: {data.getProject.likes}</p>
             <p>Created By: {data.getProject.username}</p>
-            <button>Like</button>
+            <LikeProject name={name} />
           </div>
         );
       }}
