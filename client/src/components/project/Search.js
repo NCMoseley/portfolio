@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { ApolloConsumer } from 'react-apollo';
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
 
 import { SEARCH_PROJECTS } from '../../queries';
+import { SearchItem } from './SearchItem';
 
 //  {({ data, loading, error }) => {
 //       if (loading) return <div className="App">Loading...</div>;
@@ -47,13 +48,7 @@ class Search extends Component {
             />
             <ul>
               {searchResults.map(project => (
-                <li key={project.name}>
-                  <Link to={`/projects/${project.name}`}>
-                    <h4>{project.name}</h4>
-                  </Link>
-                  <p>{project.likes}</p>
-                  <p>{project.username}</p>
-                </li>
+                <SearchItem key={project.name} {...project} />
               ))}
             </ul>
           </div>
