@@ -2,7 +2,12 @@ import React from 'react';
 import { Query, Mutation } from 'react-apollo';
 import { Link } from 'react-router-dom';
 
-import { GET_USER_PROJECTS, DELETE_USER_PROJECT } from '../../queries';
+import {
+  GET_USER_PROJECTS,
+  DELETE_USER_PROJECT,
+  GET_ALL_PROJECTS,
+  GET_CURRENT_USER
+} from '../../queries';
 
 const handleDelete = deleteUserProject => {
   const confirmDelete = window.confirm(
@@ -39,14 +44,35 @@ export const UserProjects = ({ username }) => (
               <Mutation
                 mutation={DELETE_USER_PROJECT}
                 variables={{ name: project.name }}
+                refetchQueries={() => [
+                  { query: GET_ALL_PROJECTS },
+                  {
+                    query: GET_CURRENT_USER
+                  }
+                ]}
+                update={(cache, { data: { deleteUserProject } }) => {
+                  const { getUserProjects } = cache.readQuery({
+                    query: GET_USER_PROJECTS,
+                    variables: { username }
+                  });
+                  cache.writeQuery({
+                    query: GET_USER_PROJECTS,
+                    variables: { username },
+                    data: {
+                      getUserProjects: getUserProjects.filter(
+                        project => project.name !== deleteUserProject.name
+                      )
+                    }
+                  });
+                }}
               >
-                {deleteUserProject => {
+                {(deleteUserProject, attrs = {}) => {
                   return (
                     <p
                       onClick={() => handleDelete(deleteUserProject)}
                       className="delete-button"
                     >
-                      X
+                      {attrs.loading ? 'deleting...' : 'X'}
                     </p>
                   );
                 }}
