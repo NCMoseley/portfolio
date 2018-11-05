@@ -38,6 +38,12 @@ exports.resolvers = {
         return projects;
       }
     },
+    getUserProjects: async (root, { username }, { Project }) => {
+      const userProjects = await Project.find({ username }).sort({
+        createdDate: 'desc'
+      });
+      return userProjects;
+    },
     getCurrentUser: async (root, args, { currentUser, User }) => {
       if (!currentUser) return null;
       const user = await User.findOne({

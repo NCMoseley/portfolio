@@ -5,7 +5,7 @@ import { readyDate } from '../helpers/readyDate';
 
 export const UserInfo = ({ session }) => {
   return (
-    <div className="App">
+    <div>
       <h3>User Info</h3>
       <p>Username: {session.getCurrentUser.username}</p>
       <p>Email: {session.getCurrentUser.email}</p>

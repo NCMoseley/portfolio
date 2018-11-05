@@ -76,6 +76,15 @@ export const GET_CURRENT_USER = gql`
   }
 `;
 
+export const GET_USER_PROJECTS = gql`
+  query($username: String!) {
+    getUserProjects(username: $username) {
+      name
+      likes
+    }
+  }
+`;
+
 // User Mutations
 export const SIGNIN_USER = gql`
   mutation($username: String!, $password: String!) {

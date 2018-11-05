@@ -32,6 +32,8 @@ type Query {
 
 
   getCurrentUser: User
+
+  getUserProjects(username: String!): [Project]
 }
 
 type Token {
