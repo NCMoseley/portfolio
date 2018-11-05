@@ -61,6 +61,14 @@ export const ADD_PROJECT = gql`
   }
 `;
 
+export const DELETE_USER_PROJECT = gql`
+  mutation($name: String!) {
+    deleteUserProject(name: $name) {
+      name
+    }
+  }
+`;
+
 // User Queries
 export const GET_CURRENT_USER = gql`
   query {
@@ -86,6 +94,7 @@ export const GET_USER_PROJECTS = gql`
 `;
 
 // User Mutations
+
 export const SIGNIN_USER = gql`
   mutation($username: String!, $password: String!) {
     signinUser(username: $username, password: $password) {

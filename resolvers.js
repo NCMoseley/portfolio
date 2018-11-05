@@ -71,6 +71,10 @@ exports.resolvers = {
       }).save();
       return newProject;
     },
+    deleteUserProject: async (root, { name }, { Project }) => {
+      const project = await Project.findOneAndRemove({ name });
+      return project;
+    },
     signinUser: async (root, { username, password }, { User }) => {
       const user = await User.findOne({ username });
       if (!user) throw new Error('User not found');
