@@ -53,7 +53,7 @@ const Root = ({ refetch, session }) => (
           render={() => <AddProject session={session} />}
         />
         <Route path="/projects/:name" component={ProjectPage} />
-        <Route path="/profile" component={Profile} />
+        <Route path="/profile" render={() => <Profile session={session} />} />
         <Redirect to="/" />
       </Switch>
     </Fragment>

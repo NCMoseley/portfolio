@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import { ApolloConsumer } from 'react-apollo';
-// import { Link } from 'react-router-dom';
 
 import { SEARCH_PROJECTS } from '../../queries';
 import { SearchItem } from './SearchItem';
