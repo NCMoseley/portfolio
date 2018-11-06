@@ -1,7 +1,6 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { Query } from 'react-apollo';
-import { Link } from 'react-router-dom';
 
 import { GET_PROJECT } from '../../queries';
 import LikeProject from './LikeProject';
@@ -51,9 +50,13 @@ const ProjectPage = ({ match }) => {
               </div>
               <div>
                 View project:
-                <Link to={`${data.getProject.link}`}>
+                <a
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  href={`${data.getProject.link}`}
+                >
                   <p>{data.getProject.link}</p>
-                </Link>
+                </a>
               </div>
               <LikeProject name={name} />
             </div>

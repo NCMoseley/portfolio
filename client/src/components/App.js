@@ -9,10 +9,10 @@ import { ProjectItem } from './project/ProjectItem';
 const App = () => (
   <div className="App">
     <h1 className="main-title">
-      View Projects you will <strong>love</strong>
+      View Projects showcasing great technology you <strong>love....</strong>
     </h1>
     <h5 className="dark-text">
-      <Link to={'/project/add'}>*Or share your own</Link>
+      <Link to={'/project/add'}>*Or share your own if you like</Link>
     </h5>
     <Query query={GET_ALL_PROJECTS}>
       {({ data, loading, error }) => {

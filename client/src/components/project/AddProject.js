@@ -126,6 +126,7 @@ class AddProject extends Component {
                   value={description}
                 />
                 <input
+                  type="text"
                   name="link"
                   placeholder="Add link to project"
                   onChange={this.handleChange}

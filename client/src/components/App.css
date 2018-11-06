@@ -1,19 +1,35 @@
+html {
+  background-color: dimgrey;
+}
+
 .App {
   text-align: center;
+  /* height: 90vh; */
+  background-color: dimgrey;
 }
 
 a {
-  color: #1EAEDB;
-  text-decoration: none !important;
+  text-decoration: none !important
 }
+
 
 nav {
   text-align: center;
   margin-bottom: 1em;
   padding-bottom: 0.2em;
   padding-top: 2em;
-  background-color: #efefef;
-  box-shadow: -3px 3px 10px 0px rgba(168, 168, 168, 0.7);
+  /* background-color: #efefef; */
+  /* box-shadow: -3px 3px 10px 0px rgba(168, 168, 168, 0.7); */
+  background-color: #67b6ff;
+  box-shadow: -3px 3px 10px 0px rgb(39, 37, 37);
+}
+
+nav a {
+  color: rgb(184, 223, 235);
+}
+
+nav a:hover {
+  color: rgb(213, 243, 253)
 }
 
 nav ul {
@@ -37,6 +53,7 @@ select,
 textarea {
   padding: 0.4em 0.2em;
   font-size: 2rem;
+  min-width: 212px;
 }
 
 nav a,
@@ -68,8 +85,8 @@ nav a:link {
   padding: 0.5em;
   color: #1eaedb;
   margin: 0;
-  text-decoration-line: underline;
-  text-decoration-style: dotted;
+  /* text-decoration-line: underline;
+  text-decoration-style: dotted; */
 }
 
 .cards {
@@ -129,12 +146,12 @@ nav a:link {
 }
 
 .dark-text a {
-
   color: black;
 }
 
 .Wordpress {
   width: 20%;
+  min-width: 120px;
   margin: 20px;
   z-index: 1;
   padding: 7px;
@@ -146,6 +163,7 @@ nav a:link {
 
 .React {
   width: 20%;
+  min-width: 120px;
   margin: 20px;
   z-index: 1;
   padding: 7px;
@@ -156,7 +174,8 @@ nav a:link {
 }
 
 .React-Native {
-  width: 100px;
+  width: 20%;
+  min-width: 120px;
   margin: 20px;
   z-index: 1;
   color: white;
@@ -166,7 +185,8 @@ nav a:link {
 }
 
 .Node.js {
-  width: 100px;
+  width: 20%;
+  min-width: 120px;
   margin: 20px;
   z-index: 1;
   color: black;
@@ -177,6 +197,7 @@ nav a:link {
 
 .Serverless {
   width: 20%;
+  min-width: 120px;
   margin: 20px;
   z-index: 1;
   padding: 7px;
