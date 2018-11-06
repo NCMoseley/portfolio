@@ -13,6 +13,9 @@ http://getskeleton.com/
 ==POSE== for animations
 https://popmotion.io/pose/learn/popmotion-get-started/
 
+==Loader== for Loading placeholder animation
+http://www.davidhu.io/react-spinners/
+
 react-apollo
 apollo-boost
 jwt-decode
