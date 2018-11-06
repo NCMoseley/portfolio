@@ -35,12 +35,12 @@ class LikeProject extends Component {
   handleLike = (likeProject, unlikeProject) => {
     if (this.state.liked) {
       likeProject().then(async ({ data }) => {
-        console.log(data);
+        // console.log(data);
         await this.props.refetch();
       });
     } else {
       unlikeProject().then(async ({ data }) => {
-        console.log(data);
+        // console.log(data);
         await this.props.refetch();
       });
     }

@@ -15,7 +15,7 @@ const handleDelete = deleteUserProject => {
   );
   if (confirmDelete) {
     deleteUserProject().then(({ data }) => {
-      console.log(data);
+      // console.log(data);
     });
   }
 };

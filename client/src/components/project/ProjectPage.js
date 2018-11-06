@@ -19,7 +19,7 @@ const ProjectPage = ({ match }) => {
               {console.error(error)}
             </div>
           );
-        console.log(data);
+        // console.log(data);
         return (
           <div className="App">
             <h2>{data.getProject.name}</h2>

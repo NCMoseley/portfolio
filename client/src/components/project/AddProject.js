@@ -36,7 +36,7 @@ class AddProject extends Component {
   handleSubmit = (event, addProject) => {
     event.preventDefault();
     addProject().then(({ data }) => {
-      console.log(data);
+      // console.log(data);
       this.clearState();
       this.props.history.push('/');
     });
