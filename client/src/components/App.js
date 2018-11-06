@@ -1,20 +1,26 @@
 import React from 'react';
-import './App.css';
-
 import { Query } from 'react-apollo';
+import { Link } from 'react-router-dom';
+
 import { GET_ALL_PROJECTS } from '../queries';
+import './App.css';
 import { ProjectItem } from './project/ProjectItem';
 
 const App = () => (
   <div className="App">
-    <h1>Home</h1>
+    <h1 className="main-title">
+      View Projects you will <strong>love</strong>
+    </h1>
+    <h5 className="dark-text">
+      <Link to={'/project/add'}>*Or share your own</Link>
+    </h5>
     <Query query={GET_ALL_PROJECTS}>
       {({ data, loading, error }) => {
         if (loading) return <div>Loading...</div>;
         if (error) return <div>Error...</div>;
         console.log('App.js', data);
         return (
-          <ul>
+          <ul className="cards">
             {data.getAllProjects.map(project => (
               <ProjectItem key={project.name} {...project} />
             ))}

@@ -10,7 +10,7 @@ export const withAuth = conditionFunc => Component => props => (
       return conditionFunc(data) ? (
         <Component {...props} />
       ) : (
-        <Redirect to="/" />
+        <Redirect to="/Signup" />
       );
     }}
   </Query>

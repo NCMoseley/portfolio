@@ -6,6 +6,7 @@ export const GET_ALL_PROJECTS = gql`
   query {
     getAllProjects {
       name
+      imageUrl
       category
     }
   }
