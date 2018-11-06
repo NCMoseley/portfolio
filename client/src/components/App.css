@@ -89,6 +89,11 @@ nav a:link {
   text-decoration-style: dotted; */
 }
 
+.loader {
+  margin-top: 200px;
+  text-align: -webkit-center;
+}
+
 .cards {
   display: grid;
   margin: 1.5em 3em;

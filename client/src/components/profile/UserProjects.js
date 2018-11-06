@@ -2,6 +2,8 @@ import React from 'react';
 import { Query, Mutation } from 'react-apollo';
 import { Link } from 'react-router-dom';
 
+import { Loader } from '../Loader';
+
 import {
   GET_USER_PROJECTS,
   DELETE_USER_PROJECT,
@@ -23,7 +25,7 @@ const handleDelete = deleteUserProject => {
 export const UserProjects = ({ username }) => (
   <Query query={GET_USER_PROJECTS} variables={{ username }}>
     {({ data, loading, error }) => {
-      if (loading) return <div>Loading...</div>;
+      if (loading) return <Loader />;
       if (error)
         return (
           <div>

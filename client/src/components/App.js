@@ -4,11 +4,12 @@ import { Link } from 'react-router-dom';
 import posed from 'react-pose';
 
 import { GET_ALL_PROJECTS } from '../queries';
+import { Loader } from './Loader';
 import './App.css';
-import { ProjectItem } from './project/ProjectItem';
+import ProjectItem from './project/ProjectItem';
 
 const ProjectList = posed.ul({
-  shown: { x: '0%' },
+  shown: { x: '0%', staggerChildren: 100 },
   hidden: { x: '-100%' }
 });
 
@@ -36,8 +37,14 @@ class App extends Component {
         </h5>
         <Query query={GET_ALL_PROJECTS}>
           {({ data, loading, error }) => {
-            if (loading) return <div>Loading...</div>;
-            if (error) return <div>Error...</div>;
+            if (loading) return <Loader />;
+            if (error)
+              return (
+                <div>
+                  Error...
+                  <Loader />
+                </div>
+              );
             // console.log('App.js', data);
             const { on } = this.state;
             return (

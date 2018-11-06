@@ -4,6 +4,7 @@ import { Query } from 'react-apollo';
 
 import { GET_PROJECT } from '../../queries';
 import LikeProject from './LikeProject';
+import { Loader } from '../Loader';
 
 // TODO: _id in place of name
 const ProjectPage = ({ match }) => {
@@ -11,11 +12,12 @@ const ProjectPage = ({ match }) => {
   return (
     <Query query={GET_PROJECT} variables={{ name }}>
       {({ data, loading, error }) => {
-        if (loading) return <div className="App">Loading...</div>;
+        if (loading) return <Loader />;
         if (error)
           return (
             <div className="App">
               Error
+              <Loader />
               {console.error(error)}
             </div>
           );
