@@ -6,7 +6,7 @@ type Project {
   imageUrl: String!
   category: String!
   description: String!
-  instructions: String!
+  link: String!
   createdDate: String
   likes: Int
   username: String
@@ -42,7 +42,7 @@ type Mutation {
   imageUrl: String!
   category: String!
   description: String!
-  instructions: String!
+  link: String!
   username: String
    ): Project
 

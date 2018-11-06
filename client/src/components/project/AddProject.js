@@ -13,7 +13,7 @@ import { withAuth } from '../withAuth';
 const initialState = {
   name: '',
   imageUrl: '',
-  instructions: '',
+  link: '',
   category: 'Front End',
   description: '',
   username: ''
@@ -54,9 +54,8 @@ class AddProject extends Component {
   };
 
   validateForm = () => {
-    const { name, imageUrl, category, description, instructions } = this.state;
-    const isInvalid =
-      !name || !imageUrl || !category || !description || !instructions;
+    const { name, imageUrl, category, description, link } = this.state;
+    const isInvalid = !name || !imageUrl || !category || !description || !link;
     return isInvalid;
   };
 
@@ -66,7 +65,7 @@ class AddProject extends Component {
       imageUrl,
       category,
       description,
-      instructions,
+      link,
       username
     } = this.state;
 
@@ -81,7 +80,7 @@ class AddProject extends Component {
           imageUrl,
           category,
           description,
-          instructions,
+          link,
           username
         }}
         update={this.updateCache}
@@ -126,11 +125,11 @@ class AddProject extends Component {
                   onChange={this.handleChange}
                   value={description}
                 />
-                <textarea
-                  name="instructions"
-                  placeholder="Add instructions"
+                <input
+                  name="link"
+                  placeholder="Add link to project"
                   onChange={this.handleChange}
-                  value={instructions}
+                  value={link}
                 />
                 <button
                   disabled={loading || this.validateForm()}

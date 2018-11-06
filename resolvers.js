@@ -59,7 +59,7 @@ exports.resolvers = {
   Mutation: {
     addProject: async (
       root,
-      { name, imageUrl, category, description, instructions, username },
+      { name, imageUrl, category, description, link, username },
       { Project }
     ) => {
       const newProject = await new Project({
@@ -67,7 +67,7 @@ exports.resolvers = {
         imageUrl,
         category,
         description,
-        instructions,
+        link,
         username
       }).save();
       return newProject;

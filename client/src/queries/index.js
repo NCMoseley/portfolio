@@ -18,7 +18,7 @@ export const GET_PROJECT = gql`
       imageUrl
       category
       description
-      instructions
+      link
       createdDate
       likes
       username
@@ -43,7 +43,7 @@ export const ADD_PROJECT = gql`
     $imageUrl: String!
     $category: String!
     $description: String!
-    $instructions: String!
+    $link: String!
     $username: String
   ) {
     addProject(
@@ -51,14 +51,14 @@ export const ADD_PROJECT = gql`
       imageUrl: $imageUrl
       category: $category
       description: $description
-      instructions: $instructions
+      link: $link
       username: $username
     ) {
       name
       imageUrl
       category
       description
-      instructions
+      link
       createdDate
       likes
     }

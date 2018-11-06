@@ -20,7 +20,7 @@ const ProjectSchema = new Schema({
     type: String,
     required: true
   },
-  instructions: {
+  link: {
     type: String,
     required: true
   },
