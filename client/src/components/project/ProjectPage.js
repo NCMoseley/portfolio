@@ -1,6 +1,7 @@
 import React from 'react';
 import { withRouter } from 'react-router-dom';
 import { Query } from 'react-apollo';
+import { Link } from 'react-router-dom';
 
 import { GET_PROJECT } from '../../queries';
 import LikeProject from './LikeProject';
@@ -25,7 +26,12 @@ const ProjectPage = ({ match }) => {
             <h2>{data.getProject.name}</h2>
             <p>Category: {data.getProject.category}</p>
             <p>Description: {data.getProject.description}</p>
-            <p>Instructions: {data.getProject.instructions}</p>
+            <div>
+              View project:
+              <Link to={`${data.getProject.link}`}>
+                <p>{data.getProject.link}</p>
+              </Link>
+            </div>
             <p>Likes: {data.getProject.likes}</p>
             <p>Created By: {data.getProject.username}</p>
             <LikeProject name={name} />
