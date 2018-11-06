@@ -1,6 +1,6 @@
 # Portfolio
 
-Server and client side for a portfolio and project sharing application built with a React user interface. Apollo Client takes care of the request cycle from start to finish, and using graphQL querys and mutations, this project needs no flux to handle component state. Portfolio uses mlab to run a MongoDB instance, so the app can be deployed and live without a local server.
+Server and client side for a portfolio and project sharing application built with a React user interface. Apollo Client takes care of the request cycle from start to finish, and using graphQL queries and mutations, this project needs no flux to handle component state. Portfolio uses mlab to run a MongoDB instance, so the app can be deployed and live without a local server.
 
 ## Resources
 
