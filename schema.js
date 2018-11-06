@@ -3,6 +3,7 @@ exports.typeDefs = `
 
 type Project {
   name: String!
+  imageUrl: String!
   category: String!
   description: String!
   instructions: String!
@@ -38,6 +39,7 @@ type Token {
 type Mutation {
   addProject( 
   name: String!
+  imageUrl: String!
   category: String!
   description: String!
   instructions: String!

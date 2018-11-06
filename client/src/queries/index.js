@@ -15,6 +15,7 @@ export const GET_PROJECT = gql`
   query($name: String!) {
     getProject(name: $name) {
       name
+      imageUrl
       category
       description
       instructions
@@ -39,6 +40,7 @@ export const SEARCH_PROJECTS = gql`
 export const ADD_PROJECT = gql`
   mutation(
     $name: String!
+    $imageUrl: String!
     $category: String!
     $description: String!
     $instructions: String!
@@ -46,12 +48,14 @@ export const ADD_PROJECT = gql`
   ) {
     addProject(
       name: $name
+      imageUrl: $imageUrl
       category: $category
       description: $description
       instructions: $instructions
       username: $username
     ) {
       name
+      imageUrl
       category
       description
       instructions

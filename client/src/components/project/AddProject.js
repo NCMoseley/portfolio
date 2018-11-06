@@ -12,6 +12,7 @@ import { withAuth } from '../withAuth';
 
 const initialState = {
   name: '',
+  imageUrl: '',
   instructions: '',
   category: 'Front End',
   description: '',
@@ -53,13 +54,21 @@ class AddProject extends Component {
   };
 
   validateForm = () => {
-    const { name, category, description, instructions } = this.state;
-    const isInvalid = !name || !category || !description || !instructions;
+    const { name, imageUrl, category, description, instructions } = this.state;
+    const isInvalid =
+      !name || !imageUrl || !category || !description || !instructions;
     return isInvalid;
   };
 
   render() {
-    const { name, category, description, instructions, username } = this.state;
+    const {
+      name,
+      imageUrl,
+      category,
+      description,
+      instructions,
+      username
+    } = this.state;
 
     return (
       <Mutation
@@ -67,7 +76,14 @@ class AddProject extends Component {
         refetchQueries={() => [
           { query: GET_USER_PROJECTS, variables: { username } }
         ]}
-        variables={{ name, category, description, instructions, username }}
+        variables={{
+          name,
+          imageUrl,
+          category,
+          description,
+          instructions,
+          username
+        }}
         update={this.updateCache}
       >
         {(addProject, { data, loading, error }) => {
@@ -84,6 +100,13 @@ class AddProject extends Component {
                   placeholder="Project Name"
                   onChange={this.handleChange}
                   value={name}
+                />
+                <input
+                  type="text"
+                  name="imageUrl"
+                  placeholder="Add photo"
+                  onChange={this.handleChange}
+                  value={imageUrl}
                 />
                 <select
                   name="category"

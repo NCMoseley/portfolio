@@ -59,11 +59,12 @@ exports.resolvers = {
   Mutation: {
     addProject: async (
       root,
-      { name, category, description, instructions, username },
+      { name, imageUrl, category, description, instructions, username },
       { Project }
     ) => {
       const newProject = await new Project({
         name,
+        imageUrl,
         category,
         description,
         instructions,
