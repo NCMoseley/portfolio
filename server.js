@@ -2,6 +2,7 @@ const express = require('express');
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 require('dotenv').config({ path: 'var.env' });
+const path = require('path');
 const Project = require('./models/Project.js');
 const User = require('./models/User.js');
 const cors = require('cors');
@@ -50,7 +51,7 @@ app.use(async (req, res, next) => {
 });
 
 // Create Graphiql application
-app.use('/graphiql', graphiqlExpress({ endpointURL: '/graphql' }));
+// app.use('/graphiql', graphiqlExpress({ endpointURL: '/graphql' }));
 
 // Connect Schemas to GraphQL
 app.use(
@@ -61,6 +62,14 @@ app.use(
     context: { Project, User, currentUser }
   }))
 );
+
+if (process.env.NODE_ENV === 'production') {
+  app.use(express.static('client/build'));
+
+  app.get('*', (req, res) => {
+    res.sendFile(path.resolve(__dirname, 'client', 'build', 'index.html'));
+  });
+}
 
 const PORT = process.env.PORT || 4444;
 
