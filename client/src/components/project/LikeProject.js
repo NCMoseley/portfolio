@@ -94,6 +94,7 @@ class LikeProject extends Component {
             {likeProject =>
               username && (
                 <button
+                  className="like-button"
                   onClick={() => this.handleClick(likeProject, unlikeProject)}
                 >
                   {liked ? 'Unlike' : 'Like'}

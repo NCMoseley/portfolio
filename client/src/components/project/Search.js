@@ -4,18 +4,6 @@ import { ApolloConsumer } from 'react-apollo';
 import { SEARCH_PROJECTS } from '../../queries';
 import { SearchItem } from './SearchItem';
 
-//  {({ data, loading, error }) => {
-//       if (loading) return <div className="App">Loading...</div>;
-//       if (error)
-//         return (
-//           <div className="App">
-//             Error
-//             {console.error(error)}
-//           </div>
-// console.log(data);
-//         );
-//           }}
-
 class Search extends Component {
   state = {
     searchResults: []

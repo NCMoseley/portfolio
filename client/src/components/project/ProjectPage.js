@@ -23,18 +23,40 @@ const ProjectPage = ({ match }) => {
         // console.log(data);
         return (
           <div className="App">
-            <h2>{data.getProject.name}</h2>
-            <p>Category: {data.getProject.category}</p>
-            <p>Description: {data.getProject.description}</p>
-            <div>
-              View project:
-              <Link to={`${data.getProject.link}`}>
-                <p>{data.getProject.link}</p>
-              </Link>
+            <div className="project">
+              <div className="project-header">
+                <h2 className="project-name">
+                  <strong>{data.getProject.name}</strong>
+                </h2>
+                <div
+                  className="project-image"
+                  style={{
+                    background: `url(${
+                      data.getProject.imageUrl
+                    }) top center / cover no-repeat`
+                  }}
+                />
+                <div className="row">
+                  <h5>
+                    Technology: <strong>{data.getProject.category}</strong>
+                  </h5>
+                  <p>Likes: {data.getProject.likes}</p>
+                </div>
+                <blockquote className="project-description">
+                  {data.getProject.description}
+                </blockquote>
+                <p>
+                  Created by: <strong>{data.getProject.username}</strong>
+                </p>
+              </div>
+              <div>
+                View project:
+                <Link to={`${data.getProject.link}`}>
+                  <p>{data.getProject.link}</p>
+                </Link>
+              </div>
+              <LikeProject name={name} />
             </div>
-            <p>Likes: {data.getProject.likes}</p>
-            <p>Created By: {data.getProject.username}</p>
-            <LikeProject name={name} />
           </div>
         );
       }}
