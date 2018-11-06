@@ -2,6 +2,7 @@ const mongoose = require('mongoose');
 
 const Schema = mongoose.Schema;
 
+// TODO: I'm not sure if adding that _id field will cause future problems.
 const ProjectSchema = new Schema({
   name: {
     type: String,

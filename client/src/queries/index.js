@@ -70,6 +70,15 @@ export const LIKE_PROJECT = gql`
   }
 `;
 
+export const UNLIKE_PROJECT = gql`
+  mutation($name: String!, $username: String!) {
+    unlikeProject(name: $name, username: $username) {
+      name
+      likes
+    }
+  }
+`;
+
 export const DELETE_USER_PROJECT = gql`
   mutation($name: String!) {
     deleteUserProject(name: $name) {

@@ -2,7 +2,6 @@
 exports.typeDefs = `
 
 type Project {
-  _id: ID
   name: String!
   category: String!
   description: String!
@@ -13,7 +12,6 @@ type Project {
 }
 
 type User {
-  _id: ID 
   username: String! 
   password: String! 
   email: String!
@@ -27,9 +25,6 @@ type Query {
   getProject(name: String!): Project
 
   searchProjects(searchTerm: String): [Project]
-
-
-
 
   getCurrentUser: User
 
@@ -50,6 +45,8 @@ type Mutation {
    ): Project
 
   likeProject(name: String!, username: String!): Project
+
+  unlikeProject(name: String!, username: String!): Project
 
   deleteUserProject(name: String!): Project
 

@@ -76,14 +76,31 @@ exports.resolvers = {
         { name },
         { $inc: { likes: 1 } }
       );
-      const user = await User.findOneAndUpdate(
-        { username },
-        {
-          $addToSet: {
-            favorites: name
-          }
-        }
+      //  TODO: fix that ol _id bug
+      // const user = await User.findOneAndUpdate(
+      //   { username },
+      //   {
+      //     $addToSet: {
+      //       favorites: name
+      //     }
+      //   }
+      // );
+      return project;
+    },
+    unlikeProject: async (root, { name, username }, { Project, User }) => {
+      const project = await Project.findOneAndUpdate(
+        { name },
+        { $inc: { likes: -1 } }
       );
+      //  TODO: fix that ol _id bug
+      // const user = await User.findOneAndUpdate(
+      //   { username },
+      //   {
+      //     $pull: {
+      //       favorites: name
+      //     }
+      //   }
+      // );
       return project;
     },
     deleteUserProject: async (root, { name }, { Project }) => {

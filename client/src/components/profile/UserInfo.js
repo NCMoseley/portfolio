@@ -15,13 +15,14 @@ export const UserInfo = ({ session }) => {
           {session.getCurrentUser.username}
           's Favorites
         </h3>
-        {session.getCurrentUser.favorites.map(favorite => (
-          <li key={favorite.name}>
-            <Link to={`/projects/${favorite.name}`}>
-              {<p>{favorite.name}</p>}
-            </Link>
-          </li>
-        ))}
+        {session &&
+          session.getCurrentUser.favorites.map(favorite => (
+            <li key={favorite.name}>
+              <Link to={`/projects/${favorite.name}`}>
+                {<p>{favorite.name}</p>}
+              </Link>
+            </li>
+          ))}
         {session.getCurrentUser.favorites.length < 1 && (
           <p>
             <strong>You haven't chosen any favorites. Go choose some!</strong>
