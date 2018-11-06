@@ -21,7 +21,7 @@ import { withSession } from './components/withSession';
 import ProjectPage from './components/project/ProjectPage';
 
 const client = new ApolloClient({
-  uri: 'https://portfolio-home.herokuapp.com/graphql',
+  uri: 'http://localhost:4444/graphql',
   fetchOptions: {
     credentials: 'include'
   },
