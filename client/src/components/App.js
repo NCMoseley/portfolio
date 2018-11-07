@@ -32,7 +32,11 @@ class App extends Component {
           View Projects showcasing great technology you <strong>use....</strong>
         </h1>
         <h5 className="dark-text">
-          <Link to={'/project/add'}>*Or share your own if you like</Link>
+          <Link to={'/project/add'}>
+            *Or
+            <strong className="special-link"> share </strong>
+            your own if you like
+          </Link>
         </h5>
         <Query query={GET_ALL_PROJECTS}>
           {({ data, loading, error }) => {

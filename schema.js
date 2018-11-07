@@ -52,7 +52,7 @@ type Mutation {
 
   deleteUserProject(name: String!): Project
 
-  signinUser( username: String! password: String!): Token
+  signinUser( email: String! password: String!): Token
 
   signupUser( username: String! password: String! email: String!): Token
 

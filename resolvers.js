@@ -108,8 +108,8 @@ exports.resolvers = {
       const project = await Project.findOneAndRemove({ name });
       return project;
     },
-    signinUser: async (root, { username, password }, { User }) => {
-      const user = await User.findOne({ username });
+    signinUser: async (root, { email, password }, { User }) => {
+      const user = await User.findOne({ email });
       if (!user) throw new Error('User not found');
       const isValidPassword = await bcrypt.compare(password, user.password);
       if (!isValidPassword) throw new Error('Invalid password');

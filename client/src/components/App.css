@@ -101,6 +101,11 @@ nav a:link {
   text-decoration-style: dotted;
 }
 
+.special-link {
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+}
+
 .loader {
   text-align: -webkit-center;
   padding: 5em;
