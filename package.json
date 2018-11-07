@@ -5,8 +5,7 @@
   "main": "server.js",
   "engines": {
     "node": "v10.10.0",
-    "npm": "6.4.1",
-    "yarn": "1.5.1"
+    "npm": "6.4.1"
   },
   "scripts": {
     "start": "node server.js",
