@@ -88,7 +88,7 @@ class AddProject extends Component {
         {(addProject, { data, loading, error }) => {
           return (
             <div className="App">
-              <h2 className="App">Add Project</h2>
+              <h2 className="special-title">Add Project</h2>
               <form
                 className="form"
                 onSubmit={event => this.handleSubmit(event, addProject)}

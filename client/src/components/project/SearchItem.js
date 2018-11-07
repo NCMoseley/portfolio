@@ -5,7 +5,7 @@ export const SearchItem = ({ name, category, username, description }) => (
   <li className="search-item">
     <Link to={`/projects/${name}`}>
       <h4>
-        <strong>{name}</strong>
+        <strong style={{ fontWeight: '400' }}>{name}</strong>
       </h4>
     </Link>
     <p>{description}</p>

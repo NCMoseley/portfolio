@@ -35,8 +35,8 @@ export const UserProjects = ({ username }) => (
         );
       console.log(data);
       return (
-        <ul>
-          <h3>Your Projects</h3>
+        <ul className="profile-card">
+          <h3 className="special-title-2">Your Projects</h3>
           {!data.getUserProjects.length && (
             <p>
               <strong>
@@ -46,7 +46,7 @@ export const UserProjects = ({ username }) => (
             </p>
           )}
           {data.getUserProjects.map(project => (
-            <li key={project.name}>
+            <li className="row" key={project.name}>
               <Link to={`/projects/${project.name}`}>
                 {<p>{project.name}</p>}
               </Link>
@@ -80,7 +80,11 @@ export const UserProjects = ({ username }) => (
                       onClick={() => handleDelete(deleteUserProject)}
                       className="delete-button"
                     >
-                      {attrs.loading ? 'deleting...' : 'X'}
+                      {attrs.loading ? (
+                        'deleting...'
+                      ) : (
+                        <button className="delete-button">Delete</button>
+                      )}
                     </p>
                   );
                 }}

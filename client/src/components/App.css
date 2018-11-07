@@ -1,5 +1,6 @@
 html {
   background-color: dimgrey;
+  background-image: url(http://foreverdogproductions.com/fdpn/wp-content/uploads/2016/12/gradient-wallpaper-2.jpg);
   overflow-x: hidden;
   overflow-y: scroll;
 }
@@ -7,17 +8,19 @@ html {
 .App {
   text-align: center;
   /* height: 90vh; */
-  background-color: dimgrey;
+  /* background-color: dimgrey; */
 }
 
 a {
   text-decoration: none !important;
-  font-family: 'Cabin', sans-serif;
+  /* font-family: 'Cabin', sans-serif; */
+  -webkit-font-smoothing: antialiased;
 }
 
 
 nav {
   font-family: 'Cabin', sans-serif;
+  -webkit-font-smoothing: antialiased;
   text-align: center;
   margin-bottom: 1em;
   padding-bottom: 0.2em;
@@ -89,11 +92,22 @@ nav a:link {
 
 .main-title {
   padding: 0.5em;
-  color: #1eaedb;
+  /* color: #1eaedb; */
+  color: #f5ebb4;
   margin: 0;
 }
 
 .special-title {
+  -webkit-font-smoothing: antialiased;
+  padding: 0.5em;
+  /* color: #1eaedb; */
+  color: #f5ebb4;
+  margin: 0;
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+}
+
+.special-title-2 {
   padding: 0.5em;
   color: #1eaedb;
   margin: 0;
@@ -119,6 +133,17 @@ nav a:link {
   grid-auto-flow: row dense;
   grid-gap: 2em;
   grid-auto-rows: 300px;
+}
+
+.profile-card {
+  text-align: left;
+  background: white;
+  -webkit-transition: all 0.3s;
+  transition: all 0.3s;
+  width: 90%;
+  margin: 1rem auto;
+  padding: 4rem;
+  box-shadow: -3px 3px 10px 0px rgba(168, 168, 168, 0.4);
 }
 
 .card {
