@@ -1,12 +1,19 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-export const SearchItem = ({ name, likes, username }) => (
-  <li>
+export const SearchItem = ({ name, category, username, description }) => (
+  <li className="search-item">
     <Link to={`/projects/${name}`}>
-      <h4>{name}</h4>
+      <h4>
+        <strong>{name}</strong>
+      </h4>
     </Link>
-    <p>Likes: {likes}</p>
-    <p>Created by: {username}</p>
+    <p>{description}</p>
+    <p>
+      Category: <strong>{category}</strong>
+    </p>
+    <p>
+      Created by: <strong>{username}</strong>
+    </p>
   </li>
 );

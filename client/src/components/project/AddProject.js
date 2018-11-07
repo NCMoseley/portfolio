@@ -116,7 +116,7 @@ class AddProject extends Component {
                   <option value="Wordpress">Wordpress</option>
                   <option value="React">React</option>
                   <option value="React-Native">React-Native</option>
-                  <option value="Node.js">Node.js</option>
+                  <option value="Node.js">NodeJS</option>
                   <option value="Serverless">Serverless</option>
                 </select>
                 <textarea

@@ -21,9 +21,11 @@ class Search extends Component {
       <ApolloConsumer query={SEARCH_PROJECTS} variables={{ searchTerm: '' }}>
         {client => (
           <div className="App">
+            <h2>Search for Projects by Keyword</h2>
             <input
               type="search"
-              placeholder="Search for Projects by keyword"
+              className="search"
+              placeholder="Enter keyword"
               onChange={async event => {
                 event.persist();
                 const { data } = await client.query({

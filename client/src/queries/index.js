@@ -31,7 +31,8 @@ export const SEARCH_PROJECTS = gql`
   query($searchTerm: String) {
     searchProjects(searchTerm: $searchTerm) {
       name
-      likes
+      category
+      description
       username
     }
   }
