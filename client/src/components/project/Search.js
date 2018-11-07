@@ -21,7 +21,9 @@ class Search extends Component {
       <ApolloConsumer query={SEARCH_PROJECTS} variables={{ searchTerm: '' }}>
         {client => (
           <div className="App">
-            <h2>Search for Projects by Keyword</h2>
+            <h2 className="special-title">
+              <strong>Search</strong> for Projects by Keyword...
+            </h2>
             <input
               type="search"
               className="search"
