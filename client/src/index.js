@@ -22,6 +22,8 @@ import ProjectPage from './components/project/ProjectPage';
 
 const client = new ApolloClient({
   uri: 'https://portfolio-home.herokuapp.com/graphql',
+  // choose correct path for deploy
+  // uri: 'http://localhost:4444/graphql',
   fetchOptions: {
     credentials: 'include'
   },

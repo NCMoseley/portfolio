@@ -14,7 +14,7 @@ const initialState = {
   name: '',
   imageUrl: '',
   link: '',
-  category: 'Front End',
+  category: 'Front-End',
   description: '',
   username: ''
 };
@@ -112,7 +112,7 @@ class AddProject extends Component {
                   onChange={this.handleChange}
                   value={category}
                 >
-                  <option value="Front End">Front End</option>
+                  <option value="Front-End">Front-End</option>
                   <option value="Wordpress">Wordpress</option>
                   <option value="React">React</option>
                   <option value="React-Native">React-Native</option>

@@ -196,6 +196,18 @@ nav a:link {
   color: black;
 }
 
+.Front-End {
+  width: 20%;
+  min-width: 120px;
+  margin: 20px;
+  z-index: 1;
+  padding: 7px;
+  border-radius: 5px;
+  color: white;
+  background: #24c6dc;
+  background: linear-gradient(to right, #dc2424, #ee9016);
+}
+
 .Wordpress {
   width: 20%;
   min-width: 120px;
@@ -217,7 +229,7 @@ nav a:link {
   border-radius: 5px;
   color: white;
   background: #50c9c3;
-  background: linear-gradient(to right, rgb(80, 146, 143), rgb(2, 105, 100));
+  background: linear-gradient(to right, rgb(136, 190, 189), rgb(36, 134, 121));
 }
 
 .React-Native {
@@ -227,7 +239,7 @@ nav a:link {
   z-index: 1;
   color: white;
   padding: 7px;
-  background: #9d50bb;
+  background: linear-gradient(to right, #f15f79, #eb1919);
   border-radius: 50px 120px 120px;
 }
 
@@ -238,7 +250,7 @@ nav a:link {
   z-index: 1;
   color: black;
   padding: 7px;
-  background: #ebd61d;
+  background: linear-gradient(to right, #ebd61d, #473c3e);
   border-radius: 50px 120px 120px;
 }
 

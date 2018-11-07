@@ -51,6 +51,7 @@ app.use(async (req, res, next) => {
 });
 
 // Create Graphiql application
+// Comment out for deploy
 // app.use('/graphiql', graphiqlExpress({ endpointURL: '/graphql' }));
 
 // Connect Schemas to GraphQL
