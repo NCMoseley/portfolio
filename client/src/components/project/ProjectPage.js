@@ -34,7 +34,7 @@ const ProjectPage = ({ match }) => {
                   style={{
                     background: `url(${
                       data.getProject.imageUrl
-                    }) top center / cover no-repeat`
+                    }) top center / contain no-repeat`
                   }}
                 />
                 <div className="row">

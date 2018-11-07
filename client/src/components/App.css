@@ -216,7 +216,7 @@ nav a:link {
 /* Project Page */
 
 .project-image {
-  height: 40vh;
+  height: calc(400px + 500 * ((100vw - 1000px) / 1440));
   width: 100%;
 }
 
@@ -233,6 +233,8 @@ nav a:link {
   text-align: center;
   background: whitesmoke;
   padding: 1em;
+  width: 90%;
+  margin: 0 auto;
 }
 
 .project h1 {
