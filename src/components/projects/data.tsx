@@ -48,7 +48,7 @@ export const timelineData: TimelineEntry[] = [
       },
     },
     imageUrl: "/images/super-host.png",
-    description: `A vacation management tool, similar to AirBnB.`,
+    description: `A vacation management tool, similar to Airbnb.`,
     tech: [
       "TypeScript",
       "Next.js",
