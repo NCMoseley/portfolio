@@ -8,35 +8,29 @@ export const sectionHeading = {
 
 export const timelineData: TimelineEntry[] = [
   {
-    title: "Nathan Moseley",
+    title: "Accurate Auto",
     projectUrls: {
       site: {
-        url: "https://wip.vercel.app/",
+        url: "https://accurate-auto-value.vercel.app/en",
         icon: <RiExternalLinkLine size={20} />,
       },
       repo: {
-        name: "portfolio",
+        name: "accurate-auto-value",
         owner: "ncmoseley",
         showStarCount: true,
       },
     },
-    imageUrl: "/images/.png",
-    description: `An open-source, opinionated portfolio.`,
-    tech: [
-      "TypeScript",
-      "Next.js",
-      "TailwindCSS",
-      "Aceternity UI",
-      "Framer Motion",
-    ],
+    imageUrl: "/images/accurate-auto.png",
+    description: `A small business for connecting car owners with buyers here in Switzerland.`,
+    tech: ["TypeScript", "Next.js", "TailwindCSS"],
     cards: {
       a: {
         title: "Modern Reactive UI",
-        text: `This portfolio template offers a clean, modern, and fully responsive design. Built to be sleek and dynamic, it leverages the latest front-end technologies to ensure a smooth and engaging user experience, perfect for showcasing your projects and skills.`,
+        text: `This site offers a clean, modern, and fully responsive design. Built to be sleek and dynamic, it leverages the latest front-end technologies to ensure a smooth and engaging user experience.`,
       },
       b: {
         title: "Easy Customization & Integration",
-        text: `Seamlessly customize the portfolio to fit your unique style and preferences. With support for easy integration into various data sources, this opinionated template is designed to simplify the process of building a single-page application (SPA) portfolio that truly reflects your work.`,
+        text: `Seamlessly customize the app to support additional languages and features.`,
       },
     },
   },
@@ -60,8 +54,8 @@ export const timelineData: TimelineEntry[] = [
   //   ],
   //   cards: {
   //     a: {
-  //       title: "Fast & Responsive Performance",
-  //       text: `Built with Next.js, this cinematography portfolio ensures lightning-fast page speeds and smooth navigation. High-quality video and image assets load efficiently, offering a seamless viewing experience without compromising on performance.`,
+  //       title: "",
+  //       text: ``,
   //     },
   //     b: {
   //       title: "",
