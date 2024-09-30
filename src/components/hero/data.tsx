@@ -3,8 +3,8 @@ import { IoLogoGithub } from "react-icons/io";
 
 export const title = {
   plainText: "",
-  glowText: "nextMotion",
-  subTitle: "A sleek UI starter for an unforgettable portfolio",
+  glowText: "Nathan Moseley",
+  subTitle: "A sleek portfolio",
   highlight: ["unforgettable"],
 };
 
@@ -25,7 +25,7 @@ export const profileCard = {
   tooltip: {
     imagePath:
       "https://media.licdn.com/dms/image/v2/C4D03AQE_LnsQ1dNAsQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1531425191503?e=1733356800&v=beta&t=lBflJFa2bvSxx9e0x5RGv313qBynuvxg1egbR2on0Os",
-    title: "Hey...",
-    subTitle: "That's me!",
+    title: "Here we go again",
+    subTitle: "Oh great another new project....",
   },
 };

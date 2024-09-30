@@ -94,7 +94,7 @@ export function Logo({
           fill="url(#logoGradient)"
           className="blur-[3px]"
         >
-          nextMotion
+          Nathan Moseley
         </text>
       )}
       <text
@@ -105,7 +105,7 @@ export function Logo({
         fontWeight="bold"
         fill="white"
       >
-        nextMotion
+        Nathan Moseley
       </text>
     </svg>
   );
