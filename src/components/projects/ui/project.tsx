@@ -19,7 +19,10 @@ export function Project({
   videoUrl,
   title,
 }: TimelineEntry) {
-  const { data } = usePalette(imageUrl ?? "", 8, "hex");
+  const { data: imageColors } = usePalette(imageUrl ?? "", 8, "hex");
+  const wobbleCardColorA = imageColors?.[3] ?? "#262626";
+  const wobbleCardColorB = imageColors?.[5] ?? "#235147";
+
   return (
     <div>
       <p className="mb-8 font-extralight text-muted-foreground">
@@ -60,13 +63,13 @@ export function Project({
           )}
         </BackgroundGradient>
         <WobbleCard
-          style={{ backgroundColor: data?.[6] ?? "#262626" }}
+          style={{ backgroundColor: wobbleCardColorA }}
           containerClassName="basis-[20%] grow hidden lg:block"
           className="flex flex-col justify-center pt-2"
         >
           <h2
             style={{
-              color: data?.[6] ?? "#262626",
+              color: wobbleCardColorA,
               filter: "brightness(0.8)",
             }}
             className="text-balance text-left text-base font-bold tracking-[-0.015em] md:text-xl lg:text-3xl"
@@ -78,13 +81,13 @@ export function Project({
           </p>
         </WobbleCard>
         <WobbleCard
-          style={{ backgroundColor: data?.[7] ?? "#235147" }}
+          style={{ backgroundColor: wobbleCardColorB }}
           containerClassName="col-span-2 hidden lg:block"
           className="py-2 xl:py-5"
         >
           <h2
             style={{
-              color: data?.[7] ?? "#235147",
+              color: wobbleCardColorB,
               filter: "brightness(0.8)",
             }}
             className="text-balance text-left text-base font-bold tracking-[-0.015em] md:text-xl lg:text-3xl"
@@ -97,7 +100,9 @@ export function Project({
         </WobbleCard>
         <Accordion type="multiple" className="block lg:hidden">
           <AccordionItem value="item-1">
-            <AccordionTrigger className="text-left">{cards.a.title}</AccordionTrigger>
+            <AccordionTrigger className="text-left">
+              {cards.a.title}
+            </AccordionTrigger>
             <AccordionContent>{cards.a.text}</AccordionContent>
           </AccordionItem>
           <AccordionItem value="item-2">

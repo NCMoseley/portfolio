@@ -21,7 +21,7 @@ export const timelineData: TimelineEntry[] = [
       },
     },
     imageUrl: "/images/accurate-auto.png",
-    description: `A small business for connecting car owners with buyers here in Switzerland.`,
+    description: `A small business for connecting car owners with buyers in Switzerland.`,
     tech: ["TypeScript", "Next.js", "TailwindCSS"],
     cards: {
       a: {
