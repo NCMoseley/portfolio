@@ -8,7 +8,7 @@ export const sectionHeading = {
 
 export const timelineData: TimelineEntry[] = [
   {
-    title: "Accurate Auto",
+    title: "Accurate Auto Value",
     projectUrls: {
       site: {
         url: "https://accurate-auto-value.vercel.app/en",
