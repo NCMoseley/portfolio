@@ -94,11 +94,14 @@ export function Logo({
           fill="url(#logoGradient)"
           className="blur-[3px]"
         >
-          <tspan x="12" dy="-12">
-            Nathan
+          <tspan x="12" dy="-8">
+            Linear
           </tspan>
-          <tspan x="12" dy="12">
-            Moseley
+          <tspan x="12" dy="8">
+            Gradient
+          </tspan>
+          <tspan x="12" dy="8">
+            Hub
           </tspan>
         </text>
       )}
@@ -110,11 +113,14 @@ export function Logo({
         fontWeight="bold"
         fill="white"
       >
-        <tspan x="6" dy="-12">
-          Nathan
+        <tspan x="6" dy="-8">
+          Linear
         </tspan>
-        <tspan x="6" dy="12">
-          Moseley
+        <tspan x="6" dy="8">
+          Gradient
+        </tspan>
+        <tspan x="6" dy="8">
+          Hub
         </tspan>
       </text>
     </svg>

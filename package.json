@@ -1,7 +1,6 @@
 {
-  "name": "portfolio-v4",
-  "version": "1.2.0",
-  "private": true,
+  "name": "linear-grardient-hub",
+  "version": "0.1.0",
   "type": "module",
   "scripts": {
     "build": "next build",
