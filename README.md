@@ -1,17 +1,14 @@
-<h1 align="center">nextMotion</h1>
+<h1 align="center">Nathan Moseley</h1>
 
-<h4 align="center">An open-source portfolio template</h4>
+<h4 align="center">An introduction site for a full stack engineer</h4>
 
-<h3 align="center"><img width="700" alt="demo" src="nextMotion.png" /></h3>
+<h3 align="center"><img width="700" alt="demo" src="XX.png" /></h3>
 
 [Live Demo](https://next-motion-five.vercel.app/)
 
 ---
 
 ## Getting Started
-
-> [!NOTE]  
-> The project is currently in active development, so occasional issues or disruptions can be expected.
 
 To run this project locally, follow the steps below:
 
@@ -21,11 +18,11 @@ To run this project locally, follow the steps below:
 - Clone the forked repository to your local machine:
 
   ```bash
-  git clone https://github.com/ncmoseley/nextMotion.git
+  git clone https://github.com/ncmoseley/portfolio.git
   ```
 
   ```bash
-  cd nextMotion
+  cd portfolio
   ```
 
 ### 2. Install Dependencies

@@ -11,7 +11,7 @@ export const title = {
 export const profileCard = {
   title: "Nathan Moseley",
   subTitle: "Fullstack Software Developer",
-  body: `Passionate about building scalable, user-friendly web applications. Always exploring new technologies and best practices to improve development processes.`,
+  body: `Software Developer from Western Canada. I find it interesting to build beautiful and cutting edge user experiences.`,
   socialUrls: [
     {
       url: "https://www.linkedin.com/in/ncmoseley/",
@@ -23,7 +23,8 @@ export const profileCard = {
     },
   ],
   tooltip: {
-    imagePath: "https://avatars.githubusercontent.com/u/106707326?v=4",
+    imagePath:
+      "https://media.licdn.com/dms/image/v2/C4D03AQE_LnsQ1dNAsQ/profile-displayphoto-shrink_400_400/profile-displayphoto-shrink_400_400/0/1531425191503?e=1733356800&v=beta&t=lBflJFa2bvSxx9e0x5RGv313qBynuvxg1egbR2on0Os",
     title: "Hey...",
     subTitle: "That's me!",
   },
