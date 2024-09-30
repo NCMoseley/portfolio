@@ -21,7 +21,7 @@ To run this project locally, follow the steps below:
 - Clone the forked repository to your local machine:
 
   ```bash
-  git clone https://github.com/yoyocharlie/nextMotion.git
+  git clone https://github.com/ncmoseley/nextMotion.git
   ```
 
   ```bash
