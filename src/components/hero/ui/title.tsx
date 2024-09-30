@@ -1,5 +1,6 @@
 import { title } from "../data";
 import { Logo } from "~/components/ui/logo";
+// import { GlowText } from "./glow-text";
 
 export function Title() {
   function parseForHighlightedWords(text: string) {

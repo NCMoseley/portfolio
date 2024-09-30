@@ -3,7 +3,7 @@ import { IoLogoGithub } from "react-icons/io";
 
 export const title = {
   plainText: "",
-  glowText: "Nathan Moseley",
+  glowText: "",
   subTitle: "A sleek portfolio",
   highlight: ["unforgettable"],
 };

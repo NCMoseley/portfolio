@@ -94,7 +94,12 @@ export function Logo({
           fill="url(#logoGradient)"
           className="blur-[3px]"
         >
-          Nathan Moseley
+          <tspan x="12" dy="-12">
+            Nathan
+          </tspan>
+          <tspan x="12" dy="12">
+            Moseley
+          </tspan>
         </text>
       )}
       <text
@@ -105,7 +110,12 @@ export function Logo({
         fontWeight="bold"
         fill="white"
       >
-        Nathan Moseley
+        <tspan x="6" dy="-12">
+          Nathan
+        </tspan>
+        <tspan x="6" dy="12">
+          Moseley
+        </tspan>
       </text>
     </svg>
   );
