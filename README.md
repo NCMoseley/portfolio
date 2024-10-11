@@ -74,4 +74,4 @@ Since our `/api/email` endpoint requires a server to execute the nodemailer func
 
 ## Deep Thanks to
 
-- [yoyocharlie](https://github.com/yoyocharlie/nextMotion) for the design.
+- [yoyocharlie](https://github.com/yoyocharlie) for the design.
