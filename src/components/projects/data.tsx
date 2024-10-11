@@ -22,7 +22,15 @@ export const timelineData: TimelineEntry[] = [
     },
     imageUrl: "/images/accurate-auto.png",
     description: `A small business for connecting car owners with buyers in Switzerland.`,
-    tech: ["TypeScript", "Next.js", "TailwindCSS"],
+    tech: [
+      "TypeScript",
+      "Next.js",
+      "TailwindCSS",
+      "Shadcn/UI",
+      "Prisma",
+      "Neon",
+      "Resend",
+    ],
     cards: {
       a: {
         title: "Modern Reactive UI",
@@ -59,12 +67,12 @@ export const timelineData: TimelineEntry[] = [
     ],
     cards: {
       a: {
-        title: "Reactive UI",
-        text: `This site offers a clean, modern, and fully responsive design. Built to be sleek and dynamic, it leverages the latest front-end technologies to ensure a smooth and engaging user experience.`,
+        title: "Seamless User Experience",
+        text: `Unlock a world of possibilities with our cutting-edge, user-centric design. When you copy a world class application you get that baked in. 😜`,
       },
       b: {
         title: "Easy Customization & Integration",
-        text: `Seamlessly customize the app to support additional languages and features.`,
+        text: `This project was built using a combination of cutting-edge technologies. TypeScript was used for its strong typing and better code maintainability. Next.js was chosen for its server-side rendering capabilities and fast page loads. TailwindCSS was used for its utility-first approach to styling, making it easy to write and maintain consistent UI. Prisma was utilized for its powerful ORM capabilities, allowing for efficient database interactions. NextAuth was used for its seamless authentication integration. Finally, MongoDB was chosen as the database for its flexibility and scalability.`,
       },
     },
   },

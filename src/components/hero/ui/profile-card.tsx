@@ -19,7 +19,7 @@ export function ProfileCard() {
     <div className="hidden grow basis-1 justify-center lg:flex">
       <BackgroundGradient containerClassName="w-fit">
         <CardContainer containerClassName="py-0">
-          <CardBody className="group/card flex flex-col rounded-[22px] bg-card p-6 shadow-[-5px_-3px_#ffffff17_inset] transition-all duration-300 hover:shadow-[-2px_-2px_#ffffff17_inset]">
+          <CardBody className="group/card flex flex-col rounded-[22px] bg-card p-6 shadow-[-5px_-3px_#ffffff17_inset] transition-all duration-100 hover:shadow-[-2px_-2px_#ffffff17_inset]">
             <CardItem
               translateZ="100"
               className="flex w-full gap-5 rounded-xl transition-all group-hover/card:shadow-lg"
