@@ -6,7 +6,7 @@ import { Toaster } from "~/components/ui/toaster";
 
 export const metadata: Metadata = {
   title: "Nathan Moseley",
-  description: "A Portfolio built with Next.js",
+  description: "Canadian/Swiss Full-Stack Developer",
   icons: [{ url: "/swirl.svg", rel: "icon" }],
 };
 
