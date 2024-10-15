@@ -4,7 +4,7 @@ import { IoLogoGithub } from "react-icons/io";
 export const title = {
   plainText: "",
   glowText: "",
-  subTitle: "Nathan's sleek new portfolio",
+  subTitle: "Nathan's sleek portfolio",
   highlight: ["unforgettable"],
 };
 
@@ -14,7 +14,7 @@ export const profileCard = {
   body: `Software Developer from Western Canada. I find it interesting to build beautiful and cutting edge user experiences.`,
   socialUrls: [
     {
-      url: "https://www.linkedin.com/in/ncmoseley/",
+      url: "https://www.linkedin.com/in/ncmoseley",
       icon: <FaLinkedinIn size={20} />,
     },
     {
