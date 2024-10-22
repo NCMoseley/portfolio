@@ -2,7 +2,7 @@
 
 <h4 align="center">An introduction site for a full stack engineer</h4>
 
-<h3 align="center"><img width="700" alt="demo" src="XX.png" /></h3>
+<h3 align="center"><img width="700" alt="demo" src="./public/images/example.png" /></h3>
 
 ---
 
