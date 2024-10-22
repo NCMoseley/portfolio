@@ -52,13 +52,16 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
   const heightTransform = useTransform(scrollYProgress, [0, 1], [0, height]);
   const opacityTransform = useTransform(scrollYProgress, [0, 0.1], [0, 1]);
 
+  const paddingBottom = height / 30;
+  console.log("paddingBottom:", paddingBottom);
+
   return (
     <div className="w-full font-sans" ref={containerRef}>
       <SectionHeading
         title={sectionHeading.title}
         subTitle={sectionHeading.subTitle}
       />
-      <div ref={ref} className="relative mx-auto max-w-7xl pb-20">
+      <div ref={ref} className="relative mx-auto max-w-7xl pb-60">
         {data.map((item) => (
           <TimelineHeading key={item.title} entry={item} />
         ))}
