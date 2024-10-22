@@ -58,7 +58,7 @@ export const Timeline = ({ data }: { data: TimelineEntry[] }) => {
         title={sectionHeading.title}
         subTitle={sectionHeading.subTitle}
       />
-      <div ref={ref} className="relative mx-auto max-w-7xl pb-20">
+      <div ref={ref} className="relative mx-auto max-w-7xl pb-60">
         {data.map((item) => (
           <TimelineHeading key={item.title} entry={item} />
         ))}
