@@ -4,7 +4,7 @@ import { IoLogoGithub } from "react-icons/io";
 export const title = {
   plainText: "",
   glowText: "",
-  subTitle: "Nathan's sleek new portfolio",
+  subTitle: "Nathan's sleek portfolio",
   highlight: ["unforgettable"],
 };
 
